@@ -1,4 +1,4 @@
-# PouchDB with Node Microservice
+# RentBurrow Messaging Microservice with PouchDB
 Includes the following technologies:
 - NodeJS v6.3.1 LTS
 - ExpressJS with HTTPS
