@@ -5,5 +5,5 @@ RUN npm install
 RUN npm install -g pouchdb-server
 ADD . .
 
-EXPOSE 5984
+EXPOSE 3001
 CMD ["npm", "run", "dev"]

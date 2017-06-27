@@ -1,1 +1,1 @@
-docker run -d -it -p 5984:5984 --name=pouchdbserver pouchdbserver pouchdb-server --dir ./db &
+docker run -d -it -p 3001:3001 --name=pouchdbserver npm run dev

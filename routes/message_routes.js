@@ -8,6 +8,7 @@ exports.test = function(req, res, next){
 }
 
 // POST /pouchdb
+// Using a user_id, get the appropriate database name for this pouchdb user
 exports.getPouchDB = (req, res, next) => {
   console.log(req.body)
   openPouchDb(req.body.userId).then((db_name) => {
@@ -16,6 +17,7 @@ exports.getPouchDB = (req, res, next) => {
 }
 
 // POST /message
+// Save a message into PouchDB in each relevant collection (sender and receiver)
 exports.message = function(req, res, next){
   console.log(req.body)
   const db_puts = [
@@ -27,12 +29,4 @@ exports.message = function(req, res, next){
   }).catch((err) => {
     console.log(err)
   })
-  // .then((response) => {
-  //   console.log(response)
-  //   return db.close
-  // }).then(() => {
-  //   res.json({
-  //     message: "Successfully sent message"
-  //   })
-  // })
 }
